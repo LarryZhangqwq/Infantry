@@ -1,0 +1,551 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: RM RM, RM, LIC=8VRJ7-ENT3U-SBMEJ-U1RVS-1MV3J-1D966
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\2022_Single-Dual_Shooter_Infantry\MDK-ARM\standard_robot.uvprojx
+Project File Date:  07/10/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin'
+Build target 'standard_robot'
+compiling main.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+../Src/main.c: 10 warnings, 0 errors
+compiling usbd_cdc_if.c...
+../Inc/usbd_cdc_if.h(94): warning:  #1295-D: Deprecated declaration get_vision_state - give arg types
+  uint8_t get_vision_state();
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+../Src/usbd_cdc_if.c(261): warning:  #177-D: variable "xHigherPriorityTaskWoken"  was declared but never referenced
+  static BaseType_t xHigherPriorityTaskWoken;
+../Src/usbd_cdc_if.c: 12 warnings, 0 errors
+compiling freertos.c...
+..\application\CAN_Receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\User_Task.h(22): warning:  #1295-D: Deprecated declaration ui_reset_car_front_armor_attacked_timer - give arg types
+  void ui_reset_car_front_armor_attacked_timer();
+..\application\User_Task.h(24): warning:  #1295-D: Deprecated declaration ui_reset_car_left_armor_attacked_timer - give arg types
+  void ui_reset_car_left_armor_attacked_timer();
+..\application\User_Task.h(26): warning:  #1295-D: Deprecated declaration ui_reset_car_right_armor_attacked_timer - give arg types
+  void ui_reset_car_right_armor_attacked_timer();
+..\application\User_Task.h(28): warning:  #1295-D: Deprecated declaration ui_reset_car_back_armor_attacked_timer - give arg types
+  void ui_reset_car_back_armor_attacked_timer();
+..\application\servo_task.h(9): warning:  #1295-D: Deprecated declaration get_cover_state - give arg types
+  uint8_t get_cover_state();
+../Inc/usbd_cdc_if.h(94): warning:  #1295-D: Deprecated declaration get_vision_state - give arg types
+  uint8_t get_vision_state();
+../Src/freertos.c(237): warning:  #111-D: statement is unreachable
+          free(pcWriteBuffer);
+../Src/freertos.c: 21 warnings, 0 errors
+compiling calibrate_task.c...
+..\application\can_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\calibrate_task.c: 4 warnings, 0 errors
+compiling chassis_behaviour.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\chassis_behaviour.c: 5 warnings, 0 errors
+compiling gimbal_behaviour.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\gimbal_behaviour.c: 4 warnings, 0 errors
+compiling referee.c...
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\CAN_Receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\user_task.h(22): warning:  #1295-D: Deprecated declaration ui_reset_car_front_armor_attacked_timer - give arg types
+  void ui_reset_car_front_armor_attacked_timer();
+..\application\user_task.h(24): warning:  #1295-D: Deprecated declaration ui_reset_car_left_armor_attacked_timer - give arg types
+  void ui_reset_car_left_armor_attacked_timer();
+..\application\user_task.h(26): warning:  #1295-D: Deprecated declaration ui_reset_car_right_armor_attacked_timer - give arg types
+  void ui_reset_car_right_armor_attacked_timer();
+..\application\user_task.h(28): warning:  #1295-D: Deprecated declaration ui_reset_car_back_armor_attacked_timer - give arg types
+  void ui_reset_car_back_armor_attacked_timer();
+..\application\referee.c: 18 warnings, 0 errors
+compiling chassis_power_control.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\chassis_power_control.c(140): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					power_total_current_limit = (max_power_limit - chassis_power_control->buffer_pid.out)* 500.00 * cap_measure.cap_percent / 100.0;
+..\application\chassis_power_control.c(62): warning:  #177-D: variable "cap_total_current_limit"  was declared but never referenced
+  		fp32 cap_total_current_limit = 0.0f;
+..\application\chassis_power_control.c: 12 warnings, 0 errors
+compiling chassis_task.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\chassis_task.c(592): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			top_sin += 0.001;
+..\application\chassis_task.c(716): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    wheel_speed[0] = -(-vx_set*sqrt(2) - vy_set*sqrt(2) + wz_set * 0.4)/0.0763;
+..\application\chassis_task.c(717): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    wheel_speed[1] = -(vx_set*sqrt(2) - vy_set*sqrt(2) + wz_set * 0.4)/0.0763;
+..\application\chassis_task.c(718): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    wheel_speed[2] = -(vx_set*sqrt(2) + vy_set*sqrt(2) + wz_set * 0.4)/0.0763;
+..\application\chassis_task.c(719): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    wheel_speed[3] = -(-vx_set*sqrt(2) + vy_set*sqrt(2) + wz_set * 0.4)/0.0763;
+..\application\chassis_task.c: 15 warnings, 0 errors
+compiling shoot.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\shoot.c(323): warning:  #188-D: enumerated type mixed with another type
+          shoot_control.dual_mode = (shoot_control.dual_mode+1)%2;
+..\application\shoot.c(352): warning:  #188-D: enumerated type mixed with another type
+          flag = 0;
+..\application\shoot.c(195): warning:  #177-D: variable "fric_state"  was declared but never referenced
+      static uint8_t fric_state = 0;
+..\application\shoot.c(487): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if (rad_format(shoot_control.set_angle - shoot_control.angle) > 0.04)
+..\application\shoot.c: 17 warnings, 0 errors
+compiling usb_task.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+../Inc/usbd_cdc_if.h(94): warning:  #1295-D: Deprecated declaration get_vision_state - give arg types
+  uint8_t get_vision_state();
+..\application\usb_task.c(43): warning:  #1295-D: Deprecated declaration vision_init - give arg types
+  void vision_init();
+..\application\usb_task.c(44): warning:  #1295-D: Deprecated declaration vision_data_update - give arg types
+  static void vision_data_update();
+..\application\usb_task.c(168): warning:  #1-D: last line of file ends without a newline
+  }
+..\application\usb_task.c(35): warning:  #177-D: function "usb_printf"  was declared but never referenced
+  static void usb_printf(const char *fmt, ...);
+..\application\usb_task.c: 15 warnings, 0 errors
+compiling gimbal_task.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\gimbal_task.c(648): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return (current_state - last_state * 0.9817) / (0.0009908 * 18.5);
+..\application\gimbal_task.c(678): warning:  #550-D: variable "imu"  was set but never used
+  		fp32 imu[3];
+..\application\gimbal_task.c(765): warning:  #177-D: variable "temp_pitch"  was declared but never referenced
+  		fp32 temp_pitch = feedback_update->gimbal_pitch_motor.absolute_angle;
+..\application\gimbal_task.c(781): warning:  #177-D: variable "temp_yaw"  was declared but never referenced
+  		fp32 temp_yaw = feedback_update->gimbal_yaw_motor.absolute_angle;
+..\application\gimbal_task.c: 18 warnings, 0 errors
+compiling user_task.c...
+..\application\CAN_Receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\User_Task.h(22): warning:  #1295-D: Deprecated declaration ui_reset_car_front_armor_attacked_timer - give arg types
+  void ui_reset_car_front_armor_attacked_timer();
+..\application\User_Task.h(24): warning:  #1295-D: Deprecated declaration ui_reset_car_left_armor_attacked_timer - give arg types
+  void ui_reset_car_left_armor_attacked_timer();
+..\application\User_Task.h(26): warning:  #1295-D: Deprecated declaration ui_reset_car_right_armor_attacked_timer - give arg types
+  void ui_reset_car_right_armor_attacked_timer();
+..\application\User_Task.h(28): warning:  #1295-D: Deprecated declaration ui_reset_car_back_armor_attacked_timer - give arg types
+  void ui_reset_car_back_armor_attacked_timer();
+..\application\UI_label.h(26): warning:  #1295-D: Deprecated declaration UI_label_static - give arg types
+  void UI_label_static();
+..\application\UI_label.h(28): warning:  #1295-D: Deprecated declaration UI_label_change - give arg types
+  void UI_label_change();
+..\application\UI_label.h(30): warning:  #1295-D: Deprecated declaration UI_label_reset_cache - give arg types
+  void UI_label_reset_cache();
+..\application\user_task.c(40): warning:  #1295-D: Deprecated declaration UI_send_init - give arg types
+  void UI_send_init();
+..\application\user_task.c(42): warning:  #1295-D: Deprecated declaration UI_car_init - give arg types
+  void UI_car_init();
+..\application\user_task.c(44): warning:  #1295-D: Deprecated declaration UI_car_change - give arg types
+  void UI_car_change();
+..\application\user_task.c: 24 warnings, 0 errors
+compiling vision.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\components\algorithm\kalman_filter.h(113): warning:  #1-D: last line of file ends without a newline
+  #endif //__KALMAN_FILTER_H
+../Inc/usbd_cdc_if.h(94): warning:  #1295-D: Deprecated declaration get_vision_state - give arg types
+  uint8_t get_vision_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\vision.c(13): warning:  #1295-D: Deprecated declaration get_vision_mode - give arg types
+  uint8_t get_vision_mode();
+..\application\vision.c(138): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      vision_kf[0].F_data[6] = vision_kf[2].F_data[6] = vision_kf[1].F_data[6] = 0.5 * Ts * Ts;
+..\application\vision.c(163): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      delay_trans_matrix_data[6] = 0.5 * horizon * horizon;
+..\application\vision.c(422): warning:  #1-D: last line of file ends without a newline
+  vision_control_t *get_vision_data(void) { return &vision_control; }
+..\application\vision.c(235): warning:  #177-D: function "Vision_AutoShoot_Predict"  was declared but never referenced
+  static void Vision_AutoShoot_Predict(void) {
+..\application\vision.c(280): warning:  #177-D: function "Vision_Windmill_Predict"  was declared but never referenced
+  static void Vision_Windmill_Predict(void) {}
+..\application\vision.c: 17 warnings, 0 errors
+compiling UI_label.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\UI_label.h(26): warning:  #1295-D: Deprecated declaration UI_label_static - give arg types
+  void UI_label_static();
+..\application\UI_label.h(28): warning:  #1295-D: Deprecated declaration UI_label_change - give arg types
+  void UI_label_change();
+..\application\UI_label.h(30): warning:  #1295-D: Deprecated declaration UI_label_reset_cache - give arg types
+  void UI_label_reset_cache();
+..\application\User_Task.h(22): warning:  #1295-D: Deprecated declaration ui_reset_car_front_armor_attacked_timer - give arg types
+  void ui_reset_car_front_armor_attacked_timer();
+..\application\User_Task.h(24): warning:  #1295-D: Deprecated declaration ui_reset_car_left_armor_attacked_timer - give arg types
+  void ui_reset_car_left_armor_attacked_timer();
+..\application\User_Task.h(26): warning:  #1295-D: Deprecated declaration ui_reset_car_right_armor_attacked_timer - give arg types
+  void ui_reset_car_right_armor_attacked_timer();
+..\application\User_Task.h(28): warning:  #1295-D: Deprecated declaration ui_reset_car_back_armor_attacked_timer - give arg types
+  void ui_reset_car_back_armor_attacked_timer();
+../Inc/usbd_cdc_if.h(94): warning:  #1295-D: Deprecated declaration get_vision_state - give arg types
+  uint8_t get_vision_state();
+..\application\servo_task.h(9): warning:  #1295-D: Deprecated declaration get_cover_state - give arg types
+  uint8_t get_cover_state();
+..\application\UI_label.c(131): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          if (fabsf(pitch_angle - ui_pitch_state) >= 0.01) {
+..\application\UI_label.c: 24 warnings, 0 errors
+compiling UI_ProgressBar.c...
+..\application\CAN_receive.h(201): warning:  #1295-D: Deprecated declaration get_cap_percent - give arg types
+  int8_t get_cap_percent();
+..\application\gimbal_task.h(333): warning:  #1295-D: Deprecated declaration get_head_degree - give arg types
+  uint16_t get_head_degree();
+..\application\gimbal_task.h(334): warning:  #1295-D: Deprecated declaration get_pitch_angle - give arg types
+  fp32 get_pitch_angle();
+..\application\gimbal_task.h(335): warning:  #1295-D: Deprecated declaration get_body_rad - give arg types
+  float get_body_rad();
+..\application\referee.h(200): warning:  #1295-D: Deprecated declaration get_shooter_speed_limit - give arg types
+  uint8_t get_shooter_speed_limit();
+..\application\referee.h(201): warning:  #1295-D: Deprecated declaration get_front_amour_attacked - give arg types
+  uint8_t get_front_amour_attacked();
+..\application\referee.h(202): warning:  #1295-D: Deprecated declaration get_right_amour_attacked - give arg types
+  uint8_t get_right_amour_attacked();
+..\application\referee.h(203): warning:  #1295-D: Deprecated declaration get_back_amour_attacked - give arg types
+  uint8_t get_back_amour_attacked();
+..\application\referee.h(204): warning:  #1295-D: Deprecated declaration get_left_amour_attacked - give arg types
+  uint8_t get_left_amour_attacked();
+..\application\shoot.h(159): warning:  #1295-D: Deprecated declaration get_fric_state - give arg types
+  uint8_t get_fric_state();
+..\application\shoot.h(161): warning:  #1295-D: Deprecated declaration get_trigger_state - give arg types
+  uint8_t get_trigger_state();
+..\application\shoot.h(163): warning:  #1295-D: Deprecated declaration get_shooter_mode - give arg types
+  uint8_t get_shooter_mode();
+..\application\shoot.h(165): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.h(220): warning:  #1295-D: Deprecated declaration get_cap_state - give arg types
+  uint8_t get_cap_state();
+..\application\UI_ProgressBar.c: 14 warnings, 0 errors
+linking...
+Program Size: Code=130724 RO-data=11360 RW-data=1792 ZI-data=59256  
+FromELF: creating hex file...
+".\standard_board_c\standard_board_c.axf" - 0 Error(s), 230 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_standard_robot
+  C:/Users/User/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/User/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:44
+</pre>
+</body>
+</html>

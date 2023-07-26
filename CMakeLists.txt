@@ -1,0 +1,271 @@
+cmake_minimum_required(VERSION 3.22)
+project(2022_Single_Dual_Shooter_Infantry C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(application)
+include_directories(application/protocol)
+include_directories(bsp/boards)
+include_directories(components/algorithm)
+include_directories(components/algorithm/Include)
+include_directories(components/controller)
+include_directories(components/devices)
+include_directories(components/support)
+include_directories(Drivers/CMSIS/Device/ST/STM32F4xx/Include)
+include_directories(Drivers/CMSIS/Include)
+include_directories(Drivers/STM32F4xx_HAL_Driver/Inc)
+include_directories(Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
+include_directories(Inc)
+include_directories(MDK-ARM)
+include_directories(MDK-ARM/RTE)
+include_directories(MDK-ARM/RTE/_standard_robot)
+include_directories(Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc)
+include_directories(Middlewares/ST/STM32_USB_Device_Library/Core/Inc)
+include_directories(Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS)
+include_directories(Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2)
+include_directories(Middlewares/Third_Party/FreeRTOS/Source/include)
+include_directories(Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F)
+include_directories(Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F)
+
+AUX_SOURCE_DIRECTORY(application app)
+
+add_executable(2022_Single_Dual_Shooter_Infantry
+        ${app}
+        bsp/boards/bsp_adc.c
+        bsp/boards/bsp_adc.h
+        bsp/boards/bsp_buzzer.c
+        bsp/boards/bsp_buzzer.h
+        bsp/boards/bsp_can.c
+        bsp/boards/bsp_can.h
+        bsp/boards/bsp_crc32.c
+        bsp/boards/bsp_crc32.h
+        bsp/boards/bsp_delay.c
+        bsp/boards/bsp_delay.h
+        bsp/boards/bsp_flash.c
+        bsp/boards/bsp_flash.h
+        bsp/boards/bsp_fric.c
+        bsp/boards/bsp_fric.h
+        bsp/boards/bsp_i2c.c
+        bsp/boards/bsp_i2c.h
+        bsp/boards/bsp_imu_pwm.c
+        bsp/boards/bsp_imu_pwm.h
+        bsp/boards/bsp_laser.c
+        bsp/boards/bsp_laser.h
+        bsp/boards/bsp_led.c
+        bsp/boards/bsp_led.h
+        bsp/boards/bsp_rc.c
+        bsp/boards/bsp_rc.h
+        bsp/boards/bsp_rng.c
+        bsp/boards/bsp_rng.h
+        bsp/boards/bsp_servo_pwm.c
+        bsp/boards/bsp_servo_pwm.h
+        bsp/boards/bsp_spi.c
+        bsp/boards/bsp_spi.h
+        bsp/boards/bsp_usart.c
+        bsp/boards/bsp_usart.h
+        components/algorithm/Include/arm_common_tables.h
+        components/algorithm/Include/arm_const_structs.h
+        components/algorithm/Include/arm_math.h
+        components/algorithm/Include/core_sc000.h
+        components/algorithm/Include/core_sc300.h
+        components/algorithm/AHRS.h
+        components/algorithm/AHRS_middleware.c
+        components/algorithm/AHRS_middleware.h
+        components/algorithm/kalman_filter.c
+        components/algorithm/kalman_filter.h
+        components/algorithm/user_lib.c
+        components/algorithm/user_lib.h
+        components/controller/pid.c
+        components/controller/pid.h
+        components/devices/BMI088driver.c
+        components/devices/BMI088driver.h
+        components/devices/BMI088Middleware.c
+        components/devices/BMI088Middleware.h
+        components/devices/BMI088reg.h
+        components/devices/ist8310driver.c
+        components/devices/ist8310driver.h
+        components/devices/ist8310driver_middleware.c
+        components/devices/ist8310driver_middleware.h
+        components/devices/OLED.c
+        components/devices/OLED.h
+        components/devices/oledfont.h
+        components/support/cpu_utils.c
+        components/support/cpu_utils.h
+        components/support/CRC8_CRC16.c
+        components/support/CRC8_CRC16.h
+        components/support/fifo.c
+        components/support/fifo.h
+        components/support/linux_list.h
+        components/support/macro_mutex.h
+        components/support/mem_mang.h
+        components/support/mem_mang4.c
+        Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+        Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+        Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+        Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+        Drivers/CMSIS/Include/___cmsis_armcc.h
+        Drivers/CMSIS/Include/cmsis_armcc.h
+        Drivers/CMSIS/Include/cmsis_armclang.h
+        Drivers/CMSIS/Include/cmsis_compiler.h
+        Drivers/CMSIS/Include/cmsis_gcc.h
+        Drivers/CMSIS/Include/cmsis_iccarm.h
+        Drivers/CMSIS/Include/cmsis_version.h
+        Drivers/CMSIS/Include/core_armv8mbl.h
+        Drivers/CMSIS/Include/core_armv8mml.h
+        Drivers/CMSIS/Include/core_cm0.h
+        Drivers/CMSIS/Include/core_cm0plus.h
+        Drivers/CMSIS/Include/core_cm1.h
+        Drivers/CMSIS/Include/core_cm23.h
+        Drivers/CMSIS/Include/core_cm3.h
+        Drivers/CMSIS/Include/core_cm33.h
+        Drivers/CMSIS/Include/core_cm4.h
+        Drivers/CMSIS/Include/core_cm7.h
+        Drivers/CMSIS/Include/core_sc000.h
+        Drivers/CMSIS/Include/core_sc300.h
+        Drivers/CMSIS/Include/mpu_armv7.h
+        Drivers/CMSIS/Include/mpu_armv8.h
+        Drivers/CMSIS/Include/tz_context.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+        Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+        Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+        Inc/adc.h
+        Inc/can.h
+        Inc/crc.h
+        Inc/dma.h
+        Inc/FreeRTOSConfig.h
+        Inc/gpio.h
+        Inc/i2c.h
+        Inc/main.h
+        Inc/rng.h
+        Inc/rtc.h
+        Inc/spi.h
+        Inc/stm32f4xx_hal_conf.h
+        Inc/stm32f4xx_it.h
+        Inc/tim.h
+        Inc/usart.h
+        Inc/usb_device.h
+        Inc/usbd_cdc_if.h
+        Inc/usbd_conf.h
+        Inc/usbd_desc.h
+        Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+        Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+        Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+        Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+        Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+        Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+        Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+        Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+        Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
+        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
+        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+        Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
+        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+        Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+        Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+        Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+        Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+        Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+        Middlewares/Third_Party/FreeRTOS/Source/list.c
+        Middlewares/Third_Party/FreeRTOS/Source/queue.c
+        Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+        Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+        Middlewares/Third_Party/FreeRTOS/Source/timers.c
+        Src/adc.c
+        Src/can.c
+        Src/crc.c
+        Src/dma.c
+        Src/freertos.c
+        Src/gpio.c
+        Src/i2c.c
+        Src/main.c
+        Src/rng.c
+        Src/rtc.c
+        Src/spi.c
+        Src/stm32f4xx_hal_msp.c
+        Src/stm32f4xx_it.c
+        Src/system_stm32f4xx.c
+        Src/tim.c
+        Src/usart.c
+        Src/usb_device.c
+        Src/usb_otg.c
+        Src/usbd_cdc_if.c
+        Src/usbd_conf.c
+        Src/usbd_desc.c)
